@@ -1,0 +1,7 @@
+Test1: Correcto
+Test2: Este mapa tiene filas con diferente cantidad de valores
+Test3: Este mapa contiene caracteres no numéricos
+Test4: Un archivo vacío no es un mapa válido
+Test5: Un archivo con solo espacios no es válido
+Test6: Si un mapa contiene delimitadores incorrectos (por ejemplo, tabulaciones en lugar de espacios)
+Test7: Una línea con valores incompletos también debería dar error
