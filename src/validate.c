@@ -6,7 +6,7 @@
 /*   By: ebalana- <ebalana-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 17:11:55 by ebalana-          #+#    #+#             */
-/*   Updated: 2025/01/20 17:21:59 by ebalana-         ###   ########.fr       */
+/*   Updated: 2025/01/28 17:11:10 by ebalana-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,23 @@ int	validate_and_convert_values(char **values, int width, int *row)
 			return (0);
 		row[i] = ft_atoi(value);
 	}
+	return (1);
+}
+
+int	validate_row(char **values, int width, int **row)
+{
+	*row = malloc(sizeof(int) * width);
+	if (!*row)
+	{
+		free_split(values);
+		return (0);
+	}
+	if (!validate_and_convert_values(values, width, *row))
+	{
+		free_split(values);
+		free(*row);
+		return (0);
+	}
+	free_split(values);
 	return (1);
 }

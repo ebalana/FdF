@@ -5,6 +5,11 @@ SRCS =	src/main.c \
 		src/parse.c \
 		src/validate.c \
 		src/map.c \
+		src/hooks.c \
+		src/init_fdf.c \
+		src/draw_line.c \
+		src/project.c \
+		src/color.c \
 
 # Object files
 OBJS = ${SRCS:.c=.o}
@@ -12,8 +17,7 @@ OBJS = ${SRCS:.c=.o}
 # Target binary name
 NAME = fdf
 CC = cc
-CFLAGS = -Wall -Werror -Wextra
-#CFLAGS = -Wall -Werror -Wextra -g -fsanitize=address
+CFLAGS = -Wall -Werror -Wextra -g -fsanitize=address
 RM = rm -f
 LIBFTDIR = lib/ultimate_libft/
 LIBFT_LIB = $(LIBFTDIR)/ultimate_libft.a
