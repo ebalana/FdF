@@ -33,6 +33,13 @@ HEADER = include/fdf.h
 # Build everything
 all: make_libft make_mlx $(NAME)
 
+# Check if submodules are initialized
+check-submodules:
+	@if [ ! -f $(MLX_DIR)/CMakeLists.txt ]; then \
+		echo "$(YELLOW)Initializing submodules...$(DEF_COLOR)"; \
+		git submodule update --init --recursive; \
+	fi
+
 # Compile .c to .o
 .c.o:
 	${CC} ${CFLAGS} $(MLX_INCLUDE) -c $< -o $@
@@ -47,7 +54,7 @@ make_libft:
 	make -C $(LIBFTDIR)
 
 # Build MLX42
-make_mlx:
+make_mlx: check-submodules
 	cmake -S $(MLX_DIR) -B $(MLX_DIR)/build
 	cmake --build $(MLX_DIR)/build
 
@@ -66,4 +73,4 @@ fclean: clean
 # Rebuild project
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re check-submodules
