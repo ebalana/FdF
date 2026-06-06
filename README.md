@@ -33,3 +33,17 @@ make
 - `Y`: Rotar en eje Z (γ - gamma)
 - `I`: Cambiar proyección (isométrica/paralela)
 - `U`: Cambiar modo de proyección alternativo (2D)
+
+## Uso
+- `./fdf maps/42.fdf`
+
+<img width="1578" height="946" alt="Screenshot from 2026-06-06 15-32-22" src="https://github.com/user-attachments/assets/3b2da0e4-8d4b-4373-8d8b-c4618e93d0f8" />
+
+- `./fdf maps/pylone.fdf`
+
+<img width="1578" height="946" alt="Screenshot from 2026-06-06 15-35-37" src="https://github.com/user-attachments/assets/fb0d2023-8a9d-466f-94b3-ac1fa9872ecc" />
+
+- `./fdf maps/t2.fdf`
+
+<img width="1578" height="946" alt="Screenshot from 2026-06-06 15-38-10" src="https://github.com/user-attachments/assets/ba1f2774-0b82-46b0-a3f5-0360fa43546e" />
+
